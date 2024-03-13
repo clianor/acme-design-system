@@ -1,8 +1,14 @@
-import config from "@acme/config-tsup";
+import getConfig from "@acme/config-tsup";
+import { vanillaExtractPlugin } from "@vanilla-extract/esbuild-plugin";
 import { defineConfig } from "tsup";
 
-export default defineConfig((options) => ({
-  entryPoints: ["src/button.tsx"],
-  ...config,
-  ...options,
-}));
+export default defineConfig((options) => {
+  return {
+    entryPoints: ["src/index.ts"],
+    plugins: [vanillaExtractPlugin()],
+    ...getConfig({
+      watch: options.watch ?? false,
+    }),
+    ...options,
+  };
+});

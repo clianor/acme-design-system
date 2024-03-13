@@ -1,8 +1,10 @@
-import config from "@acme/config-tsup";
+import getConfig from "@acme/config-tsup";
 import { defineConfig } from "tsup";
 
 export default defineConfig((options) => ({
   entryPoints: ["src/button.tsx"],
-  ...config,
+  ...getConfig({
+    watch: options.watch ?? false,
+  }),
   ...options,
 }));

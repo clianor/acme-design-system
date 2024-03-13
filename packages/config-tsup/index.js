@@ -1,5 +1,5 @@
 /** @type {import('tsup').Options} */
-module.exports = {
+const config = {
   format: ["esm", "cjs"],
   external: ["react", "react-dom"],
   outDir: "dist",
@@ -9,9 +9,14 @@ module.exports = {
   dts: true,
   splitting: true,
   sourcemap: true,
-  clean: true,
   shims: true,
   outExtension: ({ format }) => ({
     js: `.${format === "esm" ? "js" : format}`,
   }),
 };
+
+function getConfig({ watch }) {
+  return { ...config, minify: !watch, clean: !watch, sourcemap: !watch };
+}
+
+module.exports = getConfig;
