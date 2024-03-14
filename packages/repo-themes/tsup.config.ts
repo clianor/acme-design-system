@@ -5,7 +5,7 @@ import { defineConfig } from "tsup";
 export default defineConfig((options) => {
   return {
     entryPoints: ["src/index.ts"],
-    plugins: [vanillaExtractPlugin()],
+    esbuildPlugins: [vanillaExtractPlugin()],
     ...getConfig({
       watch: options.watch ?? false,
     }),

@@ -1,14 +1,17 @@
 {
   "name": "@acme/themes",
   "version": "0.0.0",
-  "sideEffects": false,
+  "sideEffects": [
+    "./src/theme.css.ts"
+  ],
   "license": "MIT",
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.js",
-      "require": "./dist/button.cjs"
-    }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",
@@ -30,5 +33,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.14.1"
   }
 }

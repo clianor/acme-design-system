@@ -1,1 +1,1 @@
-export * as vars from "./variables";
+export { vars } from "./theme.css";
