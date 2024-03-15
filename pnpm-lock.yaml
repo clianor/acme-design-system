@@ -22,7 +22,7 @@ importers:
     dependencies:
       '@acme/ui':
         specifier: workspace:*
-        version: link:../../packages/repo-ui
+        version: link:../../packages/acme-ui
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -73,31 +73,7 @@ importers:
         specifier: ^5.1.4
         version: 5.1.6
 
-  packages/config-tsup:
-    dependencies:
-      tsup:
-        specifier: ^8.0.2
-        version: 8.0.2(typescript@5.4.2)
-
-  packages/eslint-config:
-    devDependencies:
-      '@vercel/style-guide':
-        specifier: ^5.2.0
-        version: 5.2.0(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.2)
-      eslint-config-turbo:
-        specifier: ^1.12.4
-        version: 1.12.5(eslint@8.57.0)
-      eslint-plugin-mdx:
-        specifier: ^3.1.5
-        version: 3.1.5(eslint@8.57.0)
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      eslint-plugin-storybook:
-        specifier: ^0.8.0
-        version: 0.8.0(eslint@8.57.0)(typescript@5.4.2)
-
-  packages/repo-themes:
+  packages/acme-themes:
     dependencies:
       '@vanilla-extract/css':
         specifier: ^1.14.1
@@ -105,7 +81,7 @@ importers:
     devDependencies:
       '@acme/config-tsup':
         specifier: workspace:*
-        version: link:../config-tsup
+        version: link:../tsup-config
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -134,11 +110,11 @@ importers:
         specifier: ^5.3.3
         version: 5.4.2
 
-  packages/repo-ui:
+  packages/acme-ui:
     devDependencies:
       '@acme/config-tsup':
         specifier: workspace:*
-        version: link:../config-tsup
+        version: link:../tsup-config
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -163,6 +139,30 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.4.2
+
+  packages/eslint-config:
+    devDependencies:
+      '@vercel/style-guide':
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@8.57.0)(prettier@3.2.5)(typescript@5.4.2)
+      eslint-config-turbo:
+        specifier: ^1.12.4
+        version: 1.12.5(eslint@8.57.0)
+      eslint-plugin-mdx:
+        specifier: ^3.1.5
+        version: 3.1.5(eslint@8.57.0)
+      eslint-plugin-only-warn:
+        specifier: ^1.1.0
+        version: 1.1.0
+      eslint-plugin-storybook:
+        specifier: ^0.8.0
+        version: 0.8.0(eslint@8.57.0)(typescript@5.4.2)
+
+  packages/tsup-config:
+    dependencies:
+      tsup:
+        specifier: ^8.0.2
+        version: 8.0.2(typescript@5.4.2)
 
   packages/typescript-config: {}
 
