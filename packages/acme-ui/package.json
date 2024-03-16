@@ -4,11 +4,12 @@
   "sideEffects": false,
   "license": "MIT",
   "exports": {
-    "./button": {
-      "types": "./src/button.tsx",
-      "import": "./dist/button.js",
-      "require": "./dist/button.cjs"
-    }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",
@@ -22,6 +23,7 @@
     "@repo/typescript-config": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@vanilla-extract/esbuild-plugin": "^2.3.5",
     "eslint": "^8.57.0",
     "react": "^18.2.0",
     "tsup": "^8.0.2",
@@ -29,5 +31,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@acme/themes": "workspace:*",
+    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/recipes": "^0.5.2"
   }
 }

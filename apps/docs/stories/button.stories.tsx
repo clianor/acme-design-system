@@ -1,14 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@acme/ui/button";
+import { Button } from "@acme/ui";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  argTypes: {
-    type: {
-      control: { type: "radio" },
-      options: ["button", "submit", "reset"],
-    },
-  },
+  tags: ["autodocs"],
 };
 
 export default meta;
@@ -36,11 +31,5 @@ export const Primary: Story = {
   args: {
     children: "Hello",
     type: "button",
-    style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
-    },
   },
 };
