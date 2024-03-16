@@ -1,4 +1,4 @@
-import getConfig from "@acme/config-tsup";
+import getConfig from "@acme/tsup-config";
 import { vanillaExtractPlugin } from "@vanilla-extract/esbuild-plugin";
 import { defineConfig } from "tsup";
 

@@ -1,5 +1,5 @@
 {
-  "name": "@acme/config-tsup",
+  "name": "@acme/tsup-config",
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
