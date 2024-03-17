@@ -11,10 +11,10 @@ export const fontSize = {
 } as const;
 
 export const fontWeight = {
-  light: 300,
-  regular: 400,
-  medium: 500,
-  bold: 700,
+  light: '300',
+  regular: '400',
+  medium: '500',
+  bold: '700',
 } as const;
 
 export const lineHeight = {
