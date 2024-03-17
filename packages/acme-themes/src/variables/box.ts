@@ -9,3 +9,12 @@ export const spacing = {
   8: '3rem',
   9: '4rem',
 } as const;
+
+export const radius = {
+  1: '.1875rem',
+  2: '.25rem',
+  3: '.375rem',
+  4: '.5rem',
+  5: '.75rem',
+  6: '1rem',
+} as const;

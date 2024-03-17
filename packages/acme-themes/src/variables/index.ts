@@ -1,2 +1,2 @@
 export * as colors from './colors';
-export * as layout from './layout';
+export * as box from './box';
