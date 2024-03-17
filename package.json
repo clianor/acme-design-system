@@ -4,6 +4,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "lint:packages:list": "syncpack list",
+    "lint:packages:mismatches": "syncpack list-mismatches",
+    "lint:packages:fix-mismatches": "syncpack fix-mismatches && rimraf node_modules ./**/.turbo ./**/.next && pnpm install",
     "test": "turbo run test",
     "test:ui": "turbo run test:ui",
     "clean": "turbo run clean && rm -rf node_modules",
@@ -17,6 +20,7 @@
     "@repo/prettier-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "prettier": "^3.2.5",
+    "syncpack": "^12.3.0",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
