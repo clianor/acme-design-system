@@ -1,9 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@acme/ui";
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { Button } from '@acme/ui';
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -21,15 +22,15 @@ export const Primary: Story = {
       {...props}
       onClick={(): void => {
         // eslint-disable-next-line no-alert -- alert for demo
-        alert("Hello from Turborepo!");
+        alert('Hello from Turborepo!');
       }}
     >
       Hello
     </Button>
   ),
-  name: "Button",
+  name: 'Button',
   args: {
-    children: "Hello",
-    type: "button",
+    children: 'Hello',
+    type: 'button',
   },
 };

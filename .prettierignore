@@ -1,0 +1,28 @@
+# 빌드 아티팩트 및 종속성 폴더 무시:
+build
+coverage
+dist
+node_modules
+out
+lib
+
+# 모든 HTML 파일 및 템플릿 파일 무시:
+**/*.html
+**/*.ejs
+**/*.hbs
+
+# 문서 및 마크다운 파일 무시:
+README.md
+**/*.md
+**/*.txt
+LICENSE
+
+# 설정 파일 및 개발 도구 설정 파일 무시:
+.vscode
+.prettierignore
+.turbo
+.eslintignore
+.eslintrc.json
+.gitignore
+babel.config.js
+webpack.config.js

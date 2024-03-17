@@ -1,6 +1,7 @@
-import { vars } from "@acme/themes";
-import type { RecipeVariants } from "@vanilla-extract/recipes";
-import { recipe } from "@vanilla-extract/recipes";
+import type { RecipeVariants } from '@vanilla-extract/recipes';
+import { recipe } from '@vanilla-extract/recipes';
+
+import { vars } from '@acme/themes';
 
 export const button = recipe({
   base: {
@@ -8,26 +9,26 @@ export const button = recipe({
     border: `1px solid ${vars.colors.scale.gray[2]}`,
     padding: 10,
     borderRadius: 10,
-    ":hover": {
+    ':hover': {
       color: vars.colors.scale.blue[12],
       backgroundColor: vars.colors.scale.gray[4],
     },
   },
   variants: {
     size: {
-      "1": {
+      '1': {
         fontSize: 12,
       },
-      "2": {
+      '2': {
         fontSize: 14,
       },
-      "3": {
+      '3': {
         fontSize: 16,
       },
     },
   },
   defaultVariants: {
-    size: "2",
+    size: '2',
   },
 });
 

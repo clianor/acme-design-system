@@ -1,8 +1,9 @@
-import React from "react";
-import * as css from "./index.css";
-import type { ButtonVariants } from "./index.css";
+import React from 'react';
 
-export type ButtonProps = React.ComponentProps<"button"> & ButtonVariants;
+import * as css from './index.css';
+import type { ButtonVariants } from './index.css';
+
+export type ButtonProps = React.ComponentProps<'button'> & ButtonVariants;
 
 export function Button({ children, ...props }: ButtonProps): JSX.Element {
   return (
@@ -12,4 +13,4 @@ export function Button({ children, ...props }: ButtonProps): JSX.Element {
   );
 }
 
-Button.displayName = "Button";
+Button.displayName = 'Button';

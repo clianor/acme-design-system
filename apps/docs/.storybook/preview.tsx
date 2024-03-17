@@ -1,6 +1,6 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from '@storybook/react';
 
-import "./globals.css";
+import './globals.css';
 
 const preview: Preview = {};
 
