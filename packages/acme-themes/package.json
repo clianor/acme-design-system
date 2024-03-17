@@ -25,6 +25,7 @@
     "@repo/typescript-config": "workspace:*",
     "@types/react": "18.2.61",
     "@types/react-dom": "18.2.19",
+    "@vanilla-extract/css": "1.14.1",
     "@vanilla-extract/esbuild-plugin": "2.3.5",
     "eslint": "8.57.0",
     "react": "18.2.0",
@@ -33,9 +34,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "@vanilla-extract/css": "1.14.1"
   },
   "prettier": "@repo/prettier-config"
 }
