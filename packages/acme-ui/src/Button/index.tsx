@@ -6,7 +6,7 @@ import type { ButtonVariants } from './index.css';
 export type ButtonProps = React.ComponentProps<'button'> & ButtonVariants;
 
 export function Button({
-  disabled,
+  disabled = false,
   children,
   ...props
 }: ButtonProps): JSX.Element {
