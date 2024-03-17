@@ -12,7 +12,7 @@ module.exports = {
         '@repo/prettier-config',
         '@repo/tsup-config',
         '@repo/typescript-config',
-        '@acme/thmes',
+        '@acme/themes',
         '@acme/ui',
       ],
       dependencyTypes: ['dev', 'prod', 'peer'],
