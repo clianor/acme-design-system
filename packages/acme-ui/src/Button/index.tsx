@@ -7,7 +7,7 @@ export type ButtonProps = React.ComponentProps<'button'> & ButtonVariants;
 
 export function Button({ children, ...props }: ButtonProps): JSX.Element {
   return (
-    <button className={css.button({})} data-disabled type="button" {...props}>
+    <button {...props} className={css.button({})} data-disabled type="button">
       {children}
     </button>
   );

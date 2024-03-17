@@ -34,7 +34,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'dist/'],
+  ignorePatterns: ['node_modules/', 'dist/', 'vitest.config.ts'],
   rules: {
     'prettier/prettier': 'error',
     'import/order': 'off',
