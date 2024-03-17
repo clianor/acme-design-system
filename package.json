@@ -8,6 +8,7 @@
     "lint:packages:mismatches": "syncpack list-mismatches",
     "lint:packages:fix-mismatches": "syncpack fix-mismatches && rimraf node_modules ./**/.turbo ./**/.next && pnpm install",
     "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "test:ui": "turbo run test:ui",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
