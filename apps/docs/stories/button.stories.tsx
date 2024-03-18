@@ -5,6 +5,7 @@ import { Button } from '@acme/ui';
 const meta: Meta<typeof Button> = {
   component: Button,
   tags: ['autodocs'],
+  title: 'Components/Button',
   argTypes: {
     size: {
       control: { type: 'select' },
@@ -75,7 +76,6 @@ export const Primary: Story = {
 };
 
 export const Disabled: Story = {
-  render: (props) => <Button {...props} />,
   args: {
     children: 'Click me',
     type: 'button',
@@ -84,7 +84,6 @@ export const Disabled: Story = {
 };
 
 export const Loading: Story = {
-  render: (props) => <Button {...props} />,
   args: {
     children: 'Click me',
     type: 'button',
