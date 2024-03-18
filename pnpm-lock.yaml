@@ -164,7 +164,7 @@ importers:
         specifier: 0.5.2
         version: 0.5.2(@vanilla-extract/css@1.14.1)
       '@vanilla-extract/sprinkles':
-        specifier: ^1.6.1
+        specifier: 1.6.1
         version: 1.6.1(@vanilla-extract/css@1.14.1)
       '@vanilla-extract/vite-plugin':
         specifier: 4.0.6
