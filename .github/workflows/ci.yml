@@ -40,8 +40,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint & Build
-        run: pnpm run lint build
+      - name: Test & Lint & Build
+        run: pnpm run test lint build
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
