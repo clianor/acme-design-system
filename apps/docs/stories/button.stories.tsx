@@ -5,32 +5,90 @@ import { Button } from '@acme/ui';
 const meta: Meta<typeof Button> = {
   component: Button,
   tags: ['autodocs'],
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: ['1', '2', '3', '4'],
+      defaultValue: '2',
+      description: '버튼의 크기를 설정합니다.',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '2' },
+      },
+    },
+    disabled: {
+      control: 'boolean',
+      defaultValue: false,
+      description: '버튼을 비활성화 상태로 설정합니다.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    loading: {
+      control: 'boolean',
+      defaultValue: false,
+      description: '버튼을 로딩 상태로 설정합니다.',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: 'false' },
+      },
+    },
+    loadingText: {
+      control: 'text',
+      defaultValue: 'Loading...',
+      description: '로딩 상태일 때 표시할 텍스트를 설정합니다.',
+      table: {
+        type: { summary: 'string' },
+      },
+    },
+  },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/react/api/csf
- * to learn how to use render functions.
- */
-export const Primary: Story = {
-  render: (props) => (
-    <Button
-      {...props}
-      onClick={(): void => {
-        // eslint-disable-next-line no-alert -- alert for demo
-        alert('Hello from Turborepo!');
-      }}
-    >
-      Hello
-    </Button>
-  ),
-  name: 'Button',
+export const Size: Story = {
+  render: (props) => {
+    return (
+      <div style={{ display: 'flex', columnGap: '8px', alignItems: 'center' }}>
+        <Button {...props} size="4" />
+        <Button {...props} size="3" />
+        <Button {...props} size="2" />
+        <Button {...props} size="1" />
+      </div>
+    );
+  },
   args: {
-    children: 'Hello',
+    children: 'Click me',
     type: 'button',
+  },
+};
+
+export const Primary: Story = {
+  render: (props) => <Button {...props} />,
+  args: {
+    children: 'Click me',
+    type: 'button',
+  },
+};
+
+export const Disabled: Story = {
+  render: (props) => <Button {...props} />,
+  args: {
+    children: 'Click me',
+    type: 'button',
+    disabled: true,
+  },
+};
+
+export const Loading: Story = {
+  render: (props) => <Button {...props} />,
+  args: {
+    children: 'Click me',
+    type: 'button',
+    loading: true,
+    loadingText: 'Loading...',
   },
 };
