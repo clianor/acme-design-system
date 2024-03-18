@@ -67,6 +67,7 @@ module.exports = {
     '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/no-unsafe-argument': 'warn',
+    '@typescript-eslint/no-unsafe-call': 'off',
     'react/hook-use-state': 'off',
   },
 };

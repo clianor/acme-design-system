@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { dataAttr } from '../utils/dataAttr';
 import * as css from './index.css';
 import type { ButtonProps } from './types';
 
@@ -9,6 +10,7 @@ function Button(
     loading = false,
     loadingText,
     size,
+    color,
     children,
     ...props
   }: ButtonProps,
@@ -17,9 +19,10 @@ function Button(
   return (
     <button
       ref={ref}
-      className={css.button({ size })}
-      data-disabled={disabled}
-      data-loading={loading}
+      className={css.button({ size, color })}
+      data-accent-color={color}
+      data-disabled={dataAttr(disabled)}
+      data-loading={dataAttr(loading)}
       disabled={disabled}
       type="button"
       {...props}

@@ -1,12 +1,17 @@
 import { keyframes } from '@vanilla-extract/css';
+import type { StyleRule } from '@vanilla-extract/css';
 import type { RecipeVariants } from '@vanilla-extract/recipes';
 import { recipe } from '@vanilla-extract/recipes';
 
-import { vars } from '@acme/themes';
+import type { AccentColor } from '@acme/themes';
+import { accentColors, vars } from '@acme/themes';
 
 export const button = recipe({
   base: {
+    outline: 'none',
     boxSizing: 'border-box',
+    border: 'none',
+    cursor: 'pointer',
 
     display: 'inline-flex',
     alignItems: 'center',
@@ -14,6 +19,14 @@ export const button = recipe({
     flexShrink: '0',
     userSelect: 'none',
     verticalAlign: 'top',
+
+    selectors: {
+      '&[data-disabled]': {
+        cursor: 'not-allowed',
+        color: vars.colors.scale.grayAlpha[8],
+        backgroundColor: vars.colors.scale.grayAlpha[3],
+      },
+    },
   },
   variants: {
     size: {
@@ -62,9 +75,29 @@ export const button = recipe({
         height: vars.box.spacing[8],
       },
     },
+    color: accentColors.reduce(
+      (acc, color) => {
+        const colorKey = `${color}Alpha` as const;
+        acc[color] = {
+          backgroundColor: vars.colors.scale[colorKey][3],
+          color: vars.colors.scale[colorKey][11],
+          selectors: {
+            '&:not([data-disabled]):hover': {
+              backgroundColor: vars.colors.scale[colorKey][4],
+            },
+            '&:not([data-disabled]):active': {
+              backgroundColor: vars.colors.scale[colorKey][5],
+            },
+          },
+        };
+        return acc;
+      },
+      {} as Record<AccentColor, StyleRule>,
+    ),
   },
   defaultVariants: {
     size: '2',
+    color: 'indigo',
   },
 });
 

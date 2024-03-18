@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import { accentColors } from '@acme/themes';
 import { Button } from '@acme/ui';
 
 const meta: Meta<typeof Button> = {
@@ -41,6 +42,16 @@ const meta: Meta<typeof Button> = {
       description: '로딩 상태일 때 표시할 텍스트를 설정합니다.',
       table: {
         type: { summary: 'string' },
+      },
+    },
+    color: {
+      control: { type: 'select' },
+      options: accentColors,
+      defaultValue: 'indigo',
+      description: '버튼의 색상을 설정합니다.',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: 'indigo' },
       },
     },
   },

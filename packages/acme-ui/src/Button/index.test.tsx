@@ -59,4 +59,9 @@ describe('Button', () => {
     const button = setup({ loading: true });
     expect(button).not.toHaveTextContent(buttonText);
   });
+
+  it('버튼 색상에 따른 data 속성 확인', () => {
+    const button = setup({ color: 'indigo' });
+    expect(button).toHaveAttribute('data-accent-color', 'indigo');
+  });
 });
