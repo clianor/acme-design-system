@@ -60,6 +60,12 @@ describe('Button', () => {
     expect(button).not.toHaveTextContent(buttonText);
   });
 
+  it('버튼이 로딩 상태일 때 비활성화 상태인지 확인', () => {
+    const button = setup({ loading: true });
+    expect(button).toHaveAttribute('disabled');
+    expect(button).toHaveAttribute('data-disabled');
+  });
+
   it('버튼 색상에 따른 data 속성 확인', () => {
     const button = setup({ color: 'indigo' });
     expect(button).toHaveAttribute('data-accent-color', 'indigo');

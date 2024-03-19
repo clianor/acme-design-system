@@ -16,14 +16,15 @@ function Button(
   }: ButtonProps,
   ref: React.Ref<HTMLButtonElement>,
 ): JSX.Element {
+  const isDisabled = disabled || loading;
   return (
     <button
       ref={ref}
       className={css.button({ size, color })}
       data-accent-color={color}
-      data-disabled={dataAttr(disabled)}
+      data-disabled={dataAttr(isDisabled)}
       data-loading={dataAttr(loading)}
-      disabled={disabled}
+      disabled={isDisabled}
       type="button"
       {...props}
     >
