@@ -102,3 +102,11 @@ export const Loading: Story = {
     loadingText: 'Loading...',
   },
 };
+
+export const CustomButton: Story = {
+  render: (props) => <Button {...props} />,
+  args: {
+    children: <span>Click me</span>,
+    asChild: true,
+  },
+};

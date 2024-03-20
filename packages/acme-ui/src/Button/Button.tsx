@@ -1,8 +1,9 @@
 import React from 'react';
 
+import { Primitive } from '../Primitive';
 import { dataAttr } from '../utils/dataAttr';
 import * as css from './index.css';
-import type { ButtonProps } from './types';
+import type { ButtonElement, ButtonProps } from './types';
 
 function Button(
   {
@@ -14,11 +15,11 @@ function Button(
     children,
     ...props
   }: ButtonProps,
-  ref: React.Ref<HTMLButtonElement>,
+  ref: React.ForwardedRef<ButtonElement>,
 ): JSX.Element {
   const isDisabled = disabled || loading;
   return (
-    <button
+    <Primitive.button
       ref={ref}
       className={css.button({ size, color })}
       data-accent-color={color}
@@ -30,7 +31,7 @@ function Button(
     >
       {loading ? <div className={css.spinner({ size })} /> : children}
       {loading && loadingText ? <span>{loadingText}</span> : null}
-    </button>
+    </Primitive.button>
   );
 }
 

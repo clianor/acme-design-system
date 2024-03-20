@@ -11,8 +11,8 @@ const loadingText = 'Loading...';
 const buttonText = 'Click me';
 
 describe('Button', () => {
-  function setup(props: ButtonProps = {}) {
-    render(<Button {...props}>{buttonText}</Button>);
+  function setup({ children = buttonText, ...restProps }: ButtonProps = {}) {
+    render(<Button {...restProps}>{children}</Button>);
     return screen.getByRole('button');
   }
 
@@ -62,12 +62,23 @@ describe('Button', () => {
 
   it('버튼이 로딩 상태일 때 비활성화 상태인지 확인', () => {
     const button = setup({ loading: true });
-    expect(button).toHaveAttribute('disabled');
+    expect(button).toBeDisabled();
     expect(button).toHaveAttribute('data-disabled');
   });
 
   it('버튼 색상에 따른 data 속성 확인', () => {
     const button = setup({ color: 'indigo' });
     expect(button).toHaveAttribute('data-accent-color', 'indigo');
+  });
+
+  it('커스텀 버튼이 올바르게 렌더링되는지 확인', () => {
+    const button = setup({
+      asChild: true,
+      role: 'button',
+      children: <span>Custom Button</span>,
+    });
+    expect(button).toHaveTextContent('Custom Button');
+    expect(button.tagName.toLowerCase()).toBe('span');
+    expect(button).toHaveAttribute('role', 'button');
   });
 });
