@@ -77,6 +77,8 @@ module.exports = {
     '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/no-unsafe-argument': 'warn',
     '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    'react/jsx-pascal-case': ['warn', { allowNamespace: true }],
     'react/hook-use-state': 'off',
   },
 };
