@@ -1,0 +1,18 @@
+export const NODES = [
+  'a',
+  'button',
+  'div',
+  'form',
+  'h2',
+  'h3',
+  'img',
+  'input',
+  'label',
+  'li',
+  'nav',
+  'ol',
+  'p',
+  'span',
+  'svg',
+  'ul',
+] as const;
