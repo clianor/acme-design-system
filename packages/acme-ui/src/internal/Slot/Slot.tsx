@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 
-import { composeRefs } from '../utils/composeRefs';
-import { mergeProps } from '../utils/mergeProps';
+import { composeRefs } from '../../utils/composeRefs';
+import { mergeProps } from '../../utils/mergeProps';
 import type { SlotProps } from './types';
 
 function Slot(props: SlotProps, forwardedRef: React.Ref<HTMLElement>) {

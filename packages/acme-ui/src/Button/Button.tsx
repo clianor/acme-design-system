@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Primitive } from '../Primitive';
+import { Primitive } from '../internal/Primitive';
 import { dataAttr } from '../utils/dataAttr';
 import * as css from './index.css';
 import type { ButtonElement, ButtonProps } from './types';
