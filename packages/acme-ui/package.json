@@ -47,6 +47,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@acme/themes": "workspace:*"
+    "@acme/themes": "workspace:*",
+    "clsx": "^2.1.0"
   }
 }

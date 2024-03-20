@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 
 import { Primitive } from '../internal/Primitive';
@@ -12,6 +13,7 @@ function Button(
     loadingText,
     size,
     color,
+    className,
     children,
     ...props
   }: ButtonProps,
@@ -21,7 +23,7 @@ function Button(
   return (
     <Primitive.button
       ref={ref}
-      className={css.button({ size, color })}
+      className={clsx(css.button({ size, color }), className)}
       data-accent-color={color}
       data-disabled={dataAttr(isDisabled)}
       data-loading={dataAttr(loading)}
