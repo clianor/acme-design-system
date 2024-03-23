@@ -4,7 +4,7 @@ import { vars } from '@acme/themes';
 import { Box, Flex } from '@acme/ui';
 
 const meta: Meta<typeof Flex> = {
-  title: 'layout/Flex',
+  title: 'layouts/Flex',
   component: Flex,
 };
 

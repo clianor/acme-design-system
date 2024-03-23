@@ -4,7 +4,7 @@ import { vars } from '@acme/themes';
 import { Box } from '@acme/ui';
 
 const meta: Meta<typeof Box> = {
-  title: 'layout/Box',
+  title: 'layouts/Box',
   component: Box,
 };
 
