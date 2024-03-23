@@ -7,6 +7,11 @@ const preview: Preview = {
     docs: {
       toc: true,
     },
+    options: {
+      storySort: {
+        order: ['layouts', 'components'],
+      },
+    },
   },
 };
 
