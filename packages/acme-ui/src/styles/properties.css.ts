@@ -19,6 +19,19 @@ export const BoxDisplayProperties = defineProperties({
   },
 });
 
+export const FlexProperties = defineProperties({
+  conditions,
+  defaultCondition: 'initial',
+  properties: {
+    display: ['none', 'flex', 'inline-flex'],
+    flexDirection: ['row', 'column', 'row-reverse', 'column-reverse'],
+    alignItems: ['start', 'center', 'end', 'baseline', 'stretch'],
+    justifyContent: ['start', 'center', 'end', 'between'],
+    flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
+    gap: vars.box.spacing,
+  },
+});
+
 export const MarginAndPaddingProperties = defineProperties({
   conditions,
   defaultCondition: 'initial',
