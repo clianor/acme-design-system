@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import { Primitive } from '../internal/Primitive';
-import type { FlexSprinkles } from './index.css';
+import { extractSprinklesAndNativeProps } from '../utils/extractSprinklesAndNativeProps';
 import { flexSprinkles } from './index.css';
 import type { FlexElement, FlexProps } from './types';
 
@@ -10,20 +10,10 @@ function Flex(
   { display = 'flex', className, ...restProps }: FlexProps,
   ref: React.ForwardedRef<FlexElement>,
 ) {
-  const { sprinklesProps, nativeProps } = React.useMemo(() => {
-    return Object.entries(restProps).reduce(
-      (acc, [key, value]) => {
-        if (flexSprinkles.properties.has(key as keyof FlexSprinkles))
-          acc.sprinklesProps[key] = value;
-        else acc.nativeProps[key] = value;
-        return acc;
-      },
-      {
-        sprinklesProps: {} as Record<string, unknown>,
-        nativeProps: {} as Record<string, unknown>,
-      },
-    );
-  }, [restProps]);
+  const { sprinklesProps, nativeProps } = extractSprinklesAndNativeProps(
+    restProps,
+    flexSprinkles.properties,
+  );
 
   return (
     <Primitive.div
