@@ -6,6 +6,10 @@ import { Box, Grid } from '@acme/ui';
 const meta: Meta<typeof Grid> = {
   title: 'layouts/Grid',
   component: Grid,
+  args: {
+    gridTemplateColumns: 3,
+    gap: 3,
+  },
 };
 
 export default meta;
@@ -16,7 +20,7 @@ export const Default: Story = {
   args: {
     children: [...Array(9)].map((_) => {
       return (
-        <Box key={Math.random().toString(36)} height="9" width="auto">
+        <Box key={Math.random().toString(36)} height={16} width="auto">
           <div
             style={{
               width: '100%',
@@ -27,7 +31,5 @@ export const Default: Story = {
         </Box>
       );
     }),
-    gridTemplateColumns: 3,
-    gap: 3,
   },
 };

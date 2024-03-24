@@ -6,6 +6,11 @@ import { Box } from '@acme/ui';
 const meta: Meta<typeof Box> = {
   title: 'layouts/Box',
   component: Box,
+  args: {
+    display: 'block',
+    width: 16,
+    height: 16,
+  },
 };
 
 export default meta;
@@ -23,7 +28,5 @@ export const Default: Story = {
         }}
       />
     ),
-    width: '9',
-    height: '9',
   },
 };

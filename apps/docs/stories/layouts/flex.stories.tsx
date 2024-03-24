@@ -6,6 +6,9 @@ import { Box, Flex } from '@acme/ui';
 const meta: Meta<typeof Flex> = {
   title: 'layouts/Flex',
   component: Flex,
+  args: {
+    gap: 3,
+  },
 };
 
 export default meta;
@@ -16,7 +19,7 @@ export const Default: Story = {
   args: {
     children: [...Array(5)].map((_) => {
       return (
-        <Box key={Math.random().toString(36)} height="9" width="9">
+        <Box key={Math.random().toString(36)} height={16} width={16}>
           <div
             style={{
               width: '100%',
@@ -27,6 +30,5 @@ export const Default: Story = {
         </Box>
       );
     }),
-    gap: 3,
   },
 };

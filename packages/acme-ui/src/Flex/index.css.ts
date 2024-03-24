@@ -1,9 +1,11 @@
 import { createSprinkles } from '@vanilla-extract/sprinkles';
 
 import {
+  FlexAndGridProperties,
   FlexProperties,
   LayoutProperties,
   MarginAndPaddingProperties,
+  OverflowProperties,
   SizeProperties,
 } from '../styles/properties.css';
 
@@ -11,6 +13,8 @@ export const flexSprinkles = createSprinkles(
   FlexProperties,
   MarginAndPaddingProperties,
   LayoutProperties,
+  OverflowProperties,
+  FlexAndGridProperties,
   SizeProperties,
 );
 
