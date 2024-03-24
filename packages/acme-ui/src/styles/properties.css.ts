@@ -25,14 +25,16 @@ export const FlexProperties = defineProperties({
   properties: {
     display: ['none', 'flex', 'inline-flex'],
     flexDirection: ['row', 'column', 'row-reverse', 'column-reverse'],
+    alignContent: ['start', 'center', 'end', 'baseline', 'stretch'],
     alignItems: ['start', 'center', 'end', 'baseline', 'stretch'],
+    alignSelf: ['start', 'center', 'end', 'baseline', 'stretch'],
     justifyContent: ['start', 'center', 'end', 'between'],
+    justifyItems: ['start', 'center', 'end', 'between'],
+    justifySelf: ['start', 'center', 'end', 'between'],
     flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
+    gap: vars.box.spacing,
     rowGap: vars.box.spacing,
     columnGap: vars.box.spacing,
-  },
-  shorthands: {
-    gap: ['rowGap', 'columnGap'],
   },
 });
 
