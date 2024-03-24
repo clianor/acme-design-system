@@ -11,7 +11,7 @@ const conditions = {
   xl: { '@media': `screen and (min-width: ${breakpoints.xl})` },
 } as const;
 
-export const BoxDisplayProperties = defineProperties({
+export const BoxProperties = defineProperties({
   conditions,
   defaultCondition: 'initial',
   properties: {
