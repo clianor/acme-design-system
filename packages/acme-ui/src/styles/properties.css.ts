@@ -35,6 +35,44 @@ export const FlexProperties = defineProperties({
     gap: ['rowGap', 'columnGap'],
   },
 });
+
+export const GridProperties = defineProperties({
+  conditions,
+  defaultCondition: 'initial',
+  properties: {
+    display: ['none', 'inline-grid', 'grid'],
+    gridTemplateColumns: {
+      1: 'repeat(1, minmax(0, 1fr))',
+      2: 'repeat(2, minmax(0, 1fr))',
+      3: 'repeat(3, minmax(0, 1fr))',
+      4: 'repeat(4, minmax(0, 1fr))',
+      5: 'repeat(5, minmax(0, 1fr))',
+      6: 'repeat(6, minmax(0, 1fr))',
+      7: 'repeat(7, minmax(0, 1fr))',
+      8: 'repeat(8, minmax(0, 1fr))',
+      9: 'repeat(9, minmax(0, 1fr))',
+    },
+    gridTemplateRows: {
+      1: 'repeat(1, minmax(0, 1fr))',
+      2: 'repeat(2, minmax(0, 1fr))',
+      3: 'repeat(3, minmax(0, 1fr))',
+      4: 'repeat(4, minmax(0, 1fr))',
+      5: 'repeat(5, minmax(0, 1fr))',
+      6: 'repeat(6, minmax(0, 1fr))',
+      7: 'repeat(7, minmax(0, 1fr))',
+      8: 'repeat(8, minmax(0, 1fr))',
+      9: 'repeat(9, minmax(0, 1fr))',
+    },
+    gridAutoFlow: ['row', 'column', 'dense', 'row-dense', 'column-dense'],
+    alignContent: ['start', 'center', 'end', 'baseline', 'stretch'],
+    alignItems: ['start', 'center', 'end', 'baseline', 'stretch'],
+    alignSelf: ['start', 'center', 'end', 'baseline', 'stretch'],
+    justifyContent: ['start', 'center', 'end', 'between'],
+    justifyItems: ['start', 'center', 'end', 'between'],
+    justifySelf: ['start', 'center', 'end', 'between'],
+    gap: vars.box.spacing,
+    rowGap: vars.box.spacing,
+    columnGap: vars.box.spacing,
   },
 });
 
