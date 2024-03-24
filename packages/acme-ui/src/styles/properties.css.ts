@@ -28,7 +28,13 @@ export const FlexProperties = defineProperties({
     alignItems: ['start', 'center', 'end', 'baseline', 'stretch'],
     justifyContent: ['start', 'center', 'end', 'between'],
     flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
-    gap: vars.box.spacing,
+    rowGap: vars.box.spacing,
+    columnGap: vars.box.spacing,
+  },
+  shorthands: {
+    gap: ['rowGap', 'columnGap'],
+  },
+});
   },
 });
 
