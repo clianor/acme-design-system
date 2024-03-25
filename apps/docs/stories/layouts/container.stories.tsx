@@ -20,7 +20,10 @@ const meta: Meta<typeof Container> = {
       options: [1, 2, 3, 4],
       description: '컨테이너의 크기를 설정합니다.',
       table: {
-        type: { summary: [1, 2, 3, 4].join('|') },
+        type: {
+          summary: [1, 2, 3, 4].join(' | '),
+          detail: '1 (448px) | 2 (688px) | 3 (880px) | 4 (1136px)',
+        },
         defaultValue: { summary: '4' },
       },
     },
