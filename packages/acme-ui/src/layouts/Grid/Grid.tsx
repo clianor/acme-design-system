@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import { Primitive } from '../internal/Primitive';
-import { extractSprinklesAndNativeProps } from '../utils/extractSprinklesAndNativeProps';
+import { Primitive } from '../../shared/internal/Primitive';
+import { extractSprinklesAndNativeProps } from '../../shared/utils/extractSprinklesAndNativeProps';
 import { gridSprinkles } from './index.css';
 import type { GridElement, GridProps } from './types';
 

@@ -1,4 +1,4 @@
-import type { Primitive } from '../internal/Primitive';
+import type { Primitive } from '../../shared/internal/Primitive';
 import type { GridSprinkles } from './index.css';
 
 export type GridElement = React.ElementRef<typeof Primitive.div>;

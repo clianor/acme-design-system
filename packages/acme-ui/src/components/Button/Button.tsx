@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import { Primitive } from '../internal/Primitive';
-import { dataAttr } from '../utils/dataAttr';
+import { Primitive } from '../../shared/internal/Primitive';
+import { dataAttr } from '../../shared/utils/dataAttr';
 import * as css from './index.css';
 import type { ButtonElement, ButtonProps } from './types';
 

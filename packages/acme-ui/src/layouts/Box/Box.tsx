@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import { Primitive } from '../internal/Primitive';
-import { extractSprinklesAndNativeProps } from '../utils/extractSprinklesAndNativeProps';
+import { Primitive } from '../../shared/internal/Primitive';
+import { extractSprinklesAndNativeProps } from '../../shared/utils/extractSprinklesAndNativeProps';
 import { boxSprinkles } from './index.css';
 import type { BoxElement, BoxProps } from './types';
 

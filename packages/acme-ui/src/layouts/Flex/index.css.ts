@@ -7,7 +7,7 @@ import {
   MarginAndPaddingProperties,
   OverflowProperties,
   SizeProperties,
-} from '../styles/properties.css';
+} from '../../shared/styles/properties.css';
 
 export const flexSprinkles = createSprinkles(
   FlexProperties,

@@ -1,16 +1,16 @@
 import { createSprinkles } from '@vanilla-extract/sprinkles';
 
 import {
-  BoxProperties,
   FlexAndGridProperties,
+  GridProperties,
   LayoutProperties,
   MarginAndPaddingProperties,
   OverflowProperties,
   SizeProperties,
-} from '../styles/properties.css';
+} from '../../shared/styles/properties.css';
 
-export const boxSprinkles = createSprinkles(
-  BoxProperties,
+export const gridSprinkles = createSprinkles(
+  GridProperties,
   MarginAndPaddingProperties,
   LayoutProperties,
   OverflowProperties,
@@ -18,4 +18,4 @@ export const boxSprinkles = createSprinkles(
   SizeProperties,
 );
 
-export type BoxSprinkles = Parameters<typeof boxSprinkles>[0];
+export type GridSprinkles = Parameters<typeof gridSprinkles>[0];
