@@ -2,7 +2,7 @@ import { defineProperties } from '@vanilla-extract/sprinkles';
 
 import { breakpoints, vars } from '@acme/themes';
 
-const conditions = {
+export const conditions = {
   initial: {},
   xs: { '@media': `screen and (min-width: ${breakpoints.xs})` },
   sm: { '@media': `screen and (min-width: ${breakpoints.sm})` },
@@ -11,7 +11,7 @@ const conditions = {
   xl: { '@media': `screen and (min-width: ${breakpoints.xl})` },
 } as const;
 
-const dimensions = {
+export const dimensions = {
   auto: 'auto',
   full: '100%',
   '1/2': '50%',

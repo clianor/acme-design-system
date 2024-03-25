@@ -9,9 +9,16 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['layouts', 'components'],
+        order: [
+          'layouts',
+          ['Box', 'Flex', 'Grid', 'Container', '*'],
+          'components',
+        ],
       },
     },
+  },
+  argTypes: {
+    children: { table: { disable: true } },
   },
 };
 
