@@ -1,3 +1,4 @@
+import { style } from '@vanilla-extract/css';
 import { createSprinkles } from '@vanilla-extract/sprinkles';
 
 import {
@@ -8,6 +9,10 @@ import {
   OverflowProperties,
   SizeProperties,
 } from '../../shared/styles/properties.css';
+
+export const flex = style({
+  justifyContent: 'flex-start',
+});
 
 export const flexSprinkles = createSprinkles(
   FlexProperties,

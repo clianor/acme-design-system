@@ -57,7 +57,6 @@ export const container = style({
   display: 'flex',
   boxSizing: 'border-box',
   flexDirection: 'column',
-  // alignItems: 'center',
   flexShrink: 0,
   flexGrow: 1,
 });

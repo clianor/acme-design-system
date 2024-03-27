@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Primitive } from '../../shared/internal/Primitive';
 import { extractSprinklesAndNativeProps } from '../../shared/utils/extractSprinklesAndNativeProps';
-import { flexSprinkles } from './index.css';
+import * as css from './index.css';
 import type { FlexElement, FlexProps } from './types';
 
 function Flex(
@@ -12,13 +12,17 @@ function Flex(
 ) {
   const { sprinklesProps, nativeProps } = extractSprinklesAndNativeProps(
     restProps,
-    flexSprinkles.properties,
+    css.flexSprinkles.properties,
   );
 
   return (
     <Primitive.div
       ref={ref}
-      className={clsx(flexSprinkles({ display, ...sprinklesProps }), className)}
+      className={clsx(
+        css.flex,
+        css.flexSprinkles({ display, ...sprinklesProps }),
+        className,
+      )}
       data-testid="flex"
       {...nativeProps}
     />

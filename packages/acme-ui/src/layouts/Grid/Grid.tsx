@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Primitive } from '../../shared/internal/Primitive';
 import { extractSprinklesAndNativeProps } from '../../shared/utils/extractSprinklesAndNativeProps';
-import { gridSprinkles } from './index.css';
+import * as css from './index.css';
 import type { GridElement, GridProps } from './types';
 
 function Grid(
@@ -12,13 +12,17 @@ function Grid(
 ) {
   const { sprinklesProps, nativeProps } = extractSprinklesAndNativeProps(
     restProps,
-    gridSprinkles.properties,
+    css.gridSprinkles.properties,
   );
 
   return (
     <Primitive.div
       ref={ref}
-      className={clsx(gridSprinkles({ display, ...sprinklesProps }), className)}
+      className={clsx(
+        css.grid,
+        css.gridSprinkles({ display, ...sprinklesProps }),
+        className,
+      )}
       data-testid="grid"
       {...nativeProps}
     />
