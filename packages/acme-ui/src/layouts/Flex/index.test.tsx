@@ -13,7 +13,7 @@ describe('Flex', () => {
     return screen.getByTestId('flex');
   }
 
-  it('박스가 렌더링 되는지 확인', () => {
+  it('컴포넌트가 렌더링 되는지 확인', () => {
     const flex = setup();
     expect(flex).toBeInTheDocument();
   });

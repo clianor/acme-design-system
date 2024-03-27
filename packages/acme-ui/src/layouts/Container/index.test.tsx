@@ -16,7 +16,7 @@ describe('Container', () => {
     return screen.getByTestId('container');
   }
 
-  it('박스가 렌더링 되는지 확인', () => {
+  it('컴포넌트가 렌더링 되는지 확인', () => {
     const container = setup();
     expect(container).toBeInTheDocument();
   });
