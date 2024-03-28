@@ -12,6 +12,7 @@ const preview: Preview = {
         order: [
           'layouts',
           ['Box', 'Flex', 'Grid', 'Container', '*'],
+          'typography',
           'components',
         ],
       },

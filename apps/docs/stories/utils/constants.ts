@@ -1,6 +1,7 @@
 import { vars } from '@acme/themes';
 
 export const spacingKeys = Object.keys(vars.box.spacing);
+export const fontSizeKeys = Object.keys(vars.typography.fontSize);
 
 export const dimensionKeys = [
   'auto',
