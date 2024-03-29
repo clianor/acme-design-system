@@ -30,25 +30,12 @@ export const text = recipe({
         whiteSpace: 'nowrap',
       },
     },
-    color: accentColors.reduce(
-      (acc, color) => {
-        const colorKey = `${color}Alpha` as const;
-        acc[color] = {
-          backgroundColor: vars.colors.scale[colorKey][3],
-          color: vars.colors.scale[colorKey][11],
-          selectors: {
-            '&:not([data-disabled]):hover': {
-              backgroundColor: vars.colors.scale[colorKey][4],
-            },
-            '&:not([data-disabled]):active': {
-              backgroundColor: vars.colors.scale[colorKey][5],
-            },
-          },
-        };
-        return acc;
-      },
-      {} as Record<AccentColor, StyleRule>,
-    ),
+    color: Object.fromEntries(
+      accentColors.map((color) => [
+        color,
+        { color: vars.colors.scale[`${color}Alpha` as const][11] },
+      ]),
+    ) as Record<AccentColor, StyleRule>,
   },
 });
 
