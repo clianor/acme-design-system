@@ -19,10 +19,10 @@ const meta: Meta<typeof Text> = {
     },
     weight: {
       control: { type: 'select' },
-      options: ['normal', 'bold', 'bolder', 'lighter'],
-      description: ['normal', 'bold', 'bolder', 'lighter'].join('|'),
+      options: ['light', 'regular', 'medium', 'bold'],
+      description: '폰트 굵기를 설정합니다.',
       table: {
-        type: { summary: 'string' },
+        type: { summary: ['light', 'regular', 'medium', 'bold'].join('|') },
       },
     },
     align: {
