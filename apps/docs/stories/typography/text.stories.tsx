@@ -9,6 +9,16 @@ const meta: Meta<typeof Text> = {
   title: 'typography/Text',
   component: Text,
   argTypes: {
+    as: {
+      control: { type: 'select' },
+      options: ['span', 'div', 'label', 'p'],
+      description: 'Text 태그를 설정합니다.',
+      table: {
+        type: {
+          summary: ['span', 'div', 'label', 'p'].join('|'),
+        },
+      },
+    },
     size: {
       control: { type: 'select' },
       options: fontSizeKeys,

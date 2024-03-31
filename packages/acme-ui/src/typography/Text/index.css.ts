@@ -21,6 +21,11 @@ const fontWeightKeys = Object.keys(
 export const text = recipe({
   base: {
     display: 'block',
+    selectors: {
+      '&:where(&)': {
+        margin: 0,
+      },
+    },
   },
   variants: {
     truncate: {
