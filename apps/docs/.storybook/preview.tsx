@@ -11,8 +11,9 @@ const preview: Preview = {
       storySort: {
         order: [
           'layouts',
-          ['Box', 'Flex', 'Grid', 'Container', '*'],
+          ['Box', 'Flex', 'Grid', 'Container', 'Section', '*'],
           'typography',
+          ['Text', 'Strong', '*'],
           'components',
         ],
       },
