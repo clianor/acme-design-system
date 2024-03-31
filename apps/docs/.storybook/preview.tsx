@@ -13,7 +13,7 @@ const preview: Preview = {
           'layouts',
           ['Box', 'Flex', 'Grid', 'Container', 'Section', '*'],
           'typography',
-          ['Text', 'Strong', '*'],
+          ['Text', 'Heading', 'Strong', '*'],
           'components',
         ],
       },
