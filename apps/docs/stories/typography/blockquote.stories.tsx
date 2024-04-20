@@ -86,7 +86,11 @@ export const Size: Story = {
       <div style={{ display: 'flex', flexDirection: 'column', rowGap: '12px' }}>
         {[...new Array(9)].map((_, index) => {
           return (
-            <Blockquote size={(index + 1) as never}>
+            <Blockquote
+              {...props}
+              key={index.toLocaleString()}
+              size={(index + 1) as never}
+            >
               Perfect typography is certainly the most elusive of all arts.
               Sculpture in stone alone comes near it in obstinacy.
             </Blockquote>
