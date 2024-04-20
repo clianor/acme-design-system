@@ -5,10 +5,10 @@ import { describe, expect, it } from 'vitest';
 import type { StrongProps } from '.';
 import { Strong } from '.';
 
-const strongStrong = 'Hello Strong';
+const text = 'Hello Strong';
 
 describe('Strong', () => {
-  function setup({ children = strongStrong, ...restProps }: StrongProps = {}) {
+  function setup({ children = text, ...restProps }: StrongProps = {}) {
     render(<Strong {...restProps}>{children}</Strong>);
     return screen.getByTestId('strong');
   }

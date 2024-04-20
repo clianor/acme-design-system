@@ -5,13 +5,10 @@ import { describe, expect, it } from 'vitest';
 import type { ContainerProps } from '.';
 import { Container } from '.';
 
-const containerText = 'Hello Container';
+const text = 'Hello Container';
 
 describe('Container', () => {
-  function setup({
-    children = containerText,
-    ...restProps
-  }: ContainerProps = {}) {
+  function setup({ children = text, ...restProps }: ContainerProps = {}) {
     render(<Container {...restProps}>{children}</Container>);
     return screen.getByTestId('container');
   }

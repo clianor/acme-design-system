@@ -5,13 +5,10 @@ import { describe, expect, it } from 'vitest';
 import type { HeadingProps } from '.';
 import { Heading } from '.';
 
-const headingHeading = 'Hello Heading';
+const text = 'Hello Heading';
 
 describe('Heading', () => {
-  function setup({
-    children = headingHeading,
-    ...restProps
-  }: HeadingProps<'h1'> = {}) {
+  function setup({ children = text, ...restProps }: HeadingProps<'h1'> = {}) {
     render(<Heading {...restProps}>{children}</Heading>);
     return screen.getByTestId('heading');
   }

@@ -5,10 +5,10 @@ import { describe, expect, it } from 'vitest';
 import type { FlexProps } from '.';
 import { Flex } from '.';
 
-const flexText = 'Hello Flex';
+const text = 'Hello Flex';
 
 describe('Flex', () => {
-  function setup({ children = flexText, ...restProps }: FlexProps = {}) {
+  function setup({ children = text, ...restProps }: FlexProps = {}) {
     render(<Flex {...restProps}>{children}</Flex>);
     return screen.getByTestId('flex');
   }

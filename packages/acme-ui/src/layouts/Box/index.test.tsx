@@ -5,10 +5,10 @@ import { describe, expect, it } from 'vitest';
 import type { BoxProps } from '.';
 import { Box } from '.';
 
-const boxText = 'Hello Box';
+const text = 'Hello Box';
 
 describe('Box', () => {
-  function setup({ children = boxText, ...restProps }: BoxProps = {}) {
+  function setup({ children = text, ...restProps }: BoxProps = {}) {
     render(<Box {...restProps}>{children}</Box>);
     return screen.getByTestId('box');
   }

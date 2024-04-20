@@ -5,10 +5,10 @@ import { describe, expect, it } from 'vitest';
 import type { GridProps } from '.';
 import { Grid } from '.';
 
-const gridText = 'Hello Grid';
+const text = 'Hello Grid';
 
 describe('Grid', () => {
-  function setup({ children = gridText, ...restProps }: GridProps = {}) {
+  function setup({ children = text, ...restProps }: GridProps = {}) {
     render(<Grid {...restProps}>{children}</Grid>);
     return screen.getByTestId('grid');
   }
