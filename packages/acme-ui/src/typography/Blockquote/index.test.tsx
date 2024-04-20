@@ -8,10 +8,7 @@ import { Blockquote } from '.';
 const text = 'Hello Blockquote';
 
 describe('Blockquote', () => {
-  function setup({
-    children = text,
-    ...restProps
-  }: BlockquoteProps<'span'> = {}) {
+  function setup({ children = text, ...restProps }: BlockquoteProps = {}) {
     render(<Blockquote {...restProps}>{children}</Blockquote>);
     return screen.getByTestId('Blockquote');
   }
