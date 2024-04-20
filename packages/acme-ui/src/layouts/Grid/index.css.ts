@@ -1,4 +1,3 @@
-import { style } from '@vanilla-extract/css';
 import { createSprinkles } from '@vanilla-extract/sprinkles';
 
 import {
@@ -9,10 +8,6 @@ import {
   OverflowProperties,
   SizeProperties,
 } from '../../shared/styles/properties.css';
-
-export const grid = style({
-  alignItems: 'stretch',
-});
 
 export const gridSprinkles = createSprinkles(
   GridProperties,

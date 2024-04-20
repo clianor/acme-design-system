@@ -7,7 +7,12 @@ import * as css from './index.css';
 import type { GridElement, GridProps } from './types';
 
 function Grid(
-  { display = 'grid', className, ...restProps }: GridProps,
+  {
+    display = 'grid',
+    alignItems = 'stretch',
+    className,
+    ...restProps
+  }: GridProps,
   ref: React.ForwardedRef<GridElement>,
 ) {
   const { sprinklesProps, nativeProps } = extractSprinklesAndNativeProps(
@@ -19,8 +24,7 @@ function Grid(
     <Primitive.div
       ref={ref}
       className={clsx(
-        css.grid,
-        css.gridSprinkles({ display, ...sprinklesProps }),
+        css.gridSprinkles({ display, alignItems, ...sprinklesProps }),
         className,
       )}
       data-testid="grid"
