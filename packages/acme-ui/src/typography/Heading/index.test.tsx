@@ -11,7 +11,7 @@ describe('Heading', () => {
   function setup({
     children = headingHeading,
     ...restProps
-  }: HeadingProps = {}) {
+  }: HeadingProps<'h1'> = {}) {
     render(<Heading {...restProps}>{children}</Heading>);
     return screen.getByTestId('heading');
   }
