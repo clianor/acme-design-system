@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { accentColors } from '@acme/themes';
-import { Blockquote } from '@acme/ui';
+import { Blockquote, Flex } from '@acme/ui';
 
 import { fontSizeKeys } from '../utils/constants';
 
@@ -9,18 +9,6 @@ const meta: Meta<typeof Blockquote> = {
   title: 'typography/Blockquote',
   component: Blockquote,
   argTypes: {
-    as: {
-      control: { type: 'select' },
-      options: ['span', 'div', 'label', 'p'],
-      defaultValue: 'span',
-      description: 'Text 태그를 설정합니다.',
-      table: {
-        type: {
-          summary: ['span', 'div', 'label', 'p'].join('|'),
-          defaultValue: { summary: 'span' },
-        },
-      },
-    },
     size: {
       control: { type: 'select' },
       options: fontSizeKeys,
@@ -83,7 +71,7 @@ export const Default: Story = {
 export const Size: Story = {
   render: (props) => {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '12px' }}>
+      <Flex alignItems="start" flexDirection="column" rowGap={3}>
         {[...new Array(9)].map((_, index) => {
           return (
             <Blockquote
@@ -96,7 +84,54 @@ export const Size: Story = {
             </Blockquote>
           );
         })}
-      </div>
+      </Flex>
+    );
+  },
+};
+
+export const Weight: Story = {
+  render: (props) => {
+    return (
+      <Flex alignItems="start" flexDirection="column" rowGap={3}>
+        {(['regular', 'bold'] as const).map((weight) => {
+          return (
+            <Blockquote {...props} key={weight} weight={weight}>
+              Perfect typography is certainly the most elusive of all arts.
+              Sculpture in stone alone comes near it in obstinacy.
+            </Blockquote>
+          );
+        })}
+      </Flex>
+    );
+  },
+};
+
+export const Color: Story = {
+  render: (props) => {
+    return (
+      <Flex alignItems="start" flexDirection="column" rowGap={3}>
+        {accentColors.map((color) => {
+          return (
+            <Blockquote {...props} key={color} color={color}>
+              Perfect typography is certainly the most elusive of all arts.
+              Sculpture in stone alone comes near it in obstinacy.
+            </Blockquote>
+          );
+        })}
+      </Flex>
+    );
+  },
+};
+
+export const Truncate: Story = {
+  render: (props) => {
+    return (
+      <Flex maxWidth={96}>
+        <Blockquote {...props} truncate>
+          Perfect typography is certainly the most elusive of all arts.
+          Sculpture in stone alone comes near it in obstinacy.
+        </Blockquote>
+      </Flex>
     );
   },
 };

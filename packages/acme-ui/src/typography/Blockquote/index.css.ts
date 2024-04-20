@@ -25,6 +25,11 @@ export const Blockquote = recipe({
     borderLeftStyle: 'solid',
     borderLeftColor: vars.colors.scale.indigoAlpha[6],
     paddingLeft: `min(${vars.box.spacing[5]}, max(${vars.box.spacing[3]}, 0.5em))`,
+    selectors: {
+      '&:where(&)': {
+        margin: 0,
+      },
+    },
   },
   variants: {
     truncate: {
