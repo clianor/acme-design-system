@@ -1,4 +1,5 @@
 export const tomato = {
+  contrast: '#fff',
   1: '#fffcfc',
   2: '#fff8f7',
   3: '#feebe7',
@@ -29,6 +30,7 @@ export const tomatoAlpha = {
 } as const;
 
 export const red = {
+  contrast: '#fff',
   1: '#fffcfc',
   2: '#fff7f7',
   3: '#feebec',
@@ -59,6 +61,7 @@ export const redAlpha = {
 } as const;
 
 export const ruby = {
+  contrast: '#fff',
   1: '#fffcfd',
   2: '#fff7f8',
   3: '#feeaed',
@@ -89,6 +92,7 @@ export const rubyAlpha = {
 } as const;
 
 export const crimson = {
+  contrast: '#fff',
   1: '#fffcfd',
   2: '#fef7f9',
   3: '#ffe9f0',
@@ -119,6 +123,7 @@ export const crimsonAlpha = {
 } as const;
 
 export const pink = {
+  contrast: '#fff',
   1: '#fffcfe',
   2: '#fef7fb',
   3: '#fee9f5',
@@ -149,6 +154,7 @@ export const pinkAlpha = {
 } as const;
 
 export const plum = {
+  contrast: '#fff',
   1: '#fefcff',
   2: '#fdf7fd',
   3: '#fbebfb',
@@ -179,6 +185,7 @@ export const plumAlpha = {
 } as const;
 
 export const purple = {
+  contrast: '#fff',
   1: '#fefcfe',
   2: '#fbf7fe',
   3: '#f7edfe',
@@ -209,6 +216,7 @@ export const purpleAlpha = {
 } as const;
 
 export const violet = {
+  contrast: '#fff',
   1: '#fdfcfe',
   2: '#faf8ff',
   3: '#f4f0fe',
@@ -239,6 +247,7 @@ export const violetAlpha = {
 } as const;
 
 export const iris = {
+  contrast: '#fff',
   1: '#fdfdff',
   2: '#f8f8ff',
   3: '#f0f1fe',
@@ -269,6 +278,7 @@ export const irisAlpha = {
 } as const;
 
 export const indigo = {
+  contrast: '#fff',
   1: '#fdfdfe',
   2: '#f7f9ff',
   3: '#edf2fe',
@@ -299,6 +309,7 @@ export const indigoAlpha = {
 } as const;
 
 export const blue = {
+  contrast: '#fff',
   1: '#fbfdff',
   2: '#f4faff',
   3: '#e6f4fe',
@@ -329,6 +340,7 @@ export const blueAlpha = {
 } as const;
 
 export const cyan = {
+  contrast: '#fff',
   1: '#fafdfe',
   2: '#f2fafb',
   3: '#def7f9',
@@ -359,6 +371,7 @@ export const cyanAlpha = {
 } as const;
 
 export const teal = {
+  contrast: '#fff',
   1: '#fafefd',
   2: '#f3fbf9',
   3: '#e0f8f3',
@@ -389,6 +402,7 @@ export const tealAlpha = {
 } as const;
 
 export const jade = {
+  contrast: '#fff',
   1: '#fbfefd',
   2: '#f4fbf7',
   3: '#e6f7ed',
@@ -419,6 +433,7 @@ export const jadeAlpha = {
 } as const;
 
 export const green = {
+  contrast: '#fff',
   1: '#fbfefc',
   2: '#f4fbf6',
   3: '#e6f6eb',
@@ -449,6 +464,7 @@ export const greenAlpha = {
 } as const;
 
 export const grass = {
+  contrast: '#fff',
   1: '#fbfefb',
   2: '#f5fbf5',
   3: '#e9f6e9',
@@ -479,6 +495,7 @@ export const grassAlpha = {
 } as const;
 
 export const orange = {
+  contrast: '#fff',
   1: '#fefcfb',
   2: '#fff7ed',
   3: '#ffefd6',
@@ -509,6 +526,7 @@ export const orangeAlpha = {
 } as const;
 
 export const brown = {
+  contrast: '#fff',
   1: '#fefdfc',
   2: '#fcf9f6',
   3: '#f6eee7',
@@ -539,6 +557,7 @@ export const brownAlpha = {
 } as const;
 
 export const sky = {
+  contrast: '#1c2024',
   1: '#f9feff',
   2: '#f1fafd',
   3: '#e1f6fd',
@@ -569,6 +588,7 @@ export const skyAlpha = {
 } as const;
 
 export const mint = {
+  contrast: '#1a211e',
   1: '#f9fefd',
   2: '#f2fbf9',
   3: '#ddf9f2',
@@ -599,6 +619,7 @@ export const mintAlpha = {
 } as const;
 
 export const lime = {
+  contrast: '#1d211c',
   1: '#fcfdfa',
   2: '#f8faf3',
   3: '#eef6d6',
@@ -629,6 +650,7 @@ export const limeAlpha = {
 } as const;
 
 export const yellow = {
+  contrast: '#21201c',
   1: '#fdfdf9',
   2: '#fefce9',
   3: '#fffab8',
@@ -659,6 +681,7 @@ export const yellowAlpha = {
 } as const;
 
 export const amber = {
+  contrast: '#21201c',
   1: '#fefdfb',
   2: '#fefbe9',
   3: '#fff7c2',
@@ -689,6 +712,7 @@ export const amberAlpha = {
 } as const;
 
 export const gold = {
+  contrast: '#fff',
   1: '#fdfdfc',
   2: '#faf9f2',
   3: '#f2f0e7',
@@ -719,6 +743,7 @@ export const goldAlpha = {
 } as const;
 
 export const bronze = {
+  contrast: '#fff',
   1: '#fdfcfc',
   2: '#fdf7f5',
   3: '#f6edea',
@@ -749,6 +774,7 @@ export const bronzeAlpha = {
 } as const;
 
 export const gray = {
+  contrast: '#fff',
   1: '#fcfcfc',
   2: '#f9f9f9',
   3: '#f0f0f0',
@@ -779,6 +805,7 @@ export const grayAlpha = {
 } as const;
 
 export const mauve = {
+  contrast: '#fff',
   1: '#fdfcfd',
   2: '#faf9fb',
   3: '#f2eff3',
@@ -809,6 +836,7 @@ export const mauveAlpha = {
 } as const;
 
 export const slate = {
+  contrast: '#fff',
   1: '#fcfcfd',
   2: '#f9f9fb',
   3: '#f0f0f3',
@@ -839,6 +867,7 @@ export const slateAlpha = {
 } as const;
 
 export const sage = {
+  contrast: '#fff',
   1: '#fbfdfc',
   2: '#f7f9f8',
   3: '#eef1f0',
@@ -869,6 +898,7 @@ export const sageAlpha = {
 } as const;
 
 export const olive = {
+  contrast: '#fff',
   1: '#fcfdfc',
   2: '#f8faf8',
   3: '#eff1ef',
@@ -899,6 +929,7 @@ export const oliveAlpha = {
 } as const;
 
 export const sand = {
+  contrast: '#fff',
   1: '#fdfdfc',
   2: '#f9f9f8',
   3: '#f1f0ef',

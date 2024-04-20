@@ -20,4 +20,5 @@ export const NODES = [
   'span',
   'svg',
   'ul',
+  'code',
 ] as const;
