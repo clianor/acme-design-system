@@ -7,7 +7,12 @@ import * as css from './index.css';
 import type { FlexElement, FlexProps } from './types';
 
 function Flex(
-  { display = 'flex', className, ...restProps }: FlexProps,
+  {
+    display = 'flex',
+    justifyContent = 'start',
+    className,
+    ...restProps
+  }: FlexProps,
   ref: React.ForwardedRef<FlexElement>,
 ) {
   const { sprinklesProps, nativeProps } = extractSprinklesAndNativeProps(
@@ -20,7 +25,7 @@ function Flex(
       ref={ref}
       className={clsx(
         css.flex,
-        css.flexSprinkles({ display, ...sprinklesProps }),
+        css.flexSprinkles({ display, justifyContent, ...sprinklesProps }),
         className,
       )}
       data-testid="flex"
