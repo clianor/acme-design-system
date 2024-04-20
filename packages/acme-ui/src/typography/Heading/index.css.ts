@@ -31,7 +31,7 @@ export const heading = recipe({
     truncate: {
       true: {
         overflow: 'hidden',
-        headingOverflow: 'ellipsis',
+        textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
       },
     },
