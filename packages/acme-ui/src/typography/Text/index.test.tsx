@@ -14,7 +14,7 @@ describe('Text', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const text = setup();
-    expect(text).toBeInTheDocument();
+    const textElem = setup();
+    expect(textElem).toBeInTheDocument();
   });
 });

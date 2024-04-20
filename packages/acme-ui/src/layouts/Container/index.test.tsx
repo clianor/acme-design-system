@@ -14,7 +14,7 @@ describe('Container', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const container = setup();
-    expect(container).toBeInTheDocument();
+    const containerElem = setup();
+    expect(containerElem).toBeInTheDocument();
   });
 });

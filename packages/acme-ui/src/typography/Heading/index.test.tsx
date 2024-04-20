@@ -14,7 +14,7 @@ describe('Heading', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const heading = setup();
-    expect(heading).toBeInTheDocument();
+    const headingElem = setup();
+    expect(headingElem).toBeInTheDocument();
   });
 });

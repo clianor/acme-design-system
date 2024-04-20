@@ -14,7 +14,7 @@ describe('Flex', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const flex = setup();
-    expect(flex).toBeInTheDocument();
+    const flexElem = setup();
+    expect(flexElem).toBeInTheDocument();
   });
 });

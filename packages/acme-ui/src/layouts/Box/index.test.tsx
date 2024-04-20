@@ -14,7 +14,7 @@ describe('Box', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const box = setup();
-    expect(box).toBeInTheDocument();
+    const boxElem = setup();
+    expect(boxElem).toBeInTheDocument();
   });
 });

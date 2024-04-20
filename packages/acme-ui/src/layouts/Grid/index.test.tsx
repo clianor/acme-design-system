@@ -14,7 +14,7 @@ describe('Grid', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const grid = setup();
-    expect(grid).toBeInTheDocument();
+    const gridElem = setup();
+    expect(gridElem).toBeInTheDocument();
   });
 });

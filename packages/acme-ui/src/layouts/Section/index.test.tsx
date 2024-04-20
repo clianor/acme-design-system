@@ -14,7 +14,7 @@ describe('Section', () => {
   }
 
   it('컴포넌트가 렌더링 되는지 확인', () => {
-    const section = setup();
-    expect(section).toBeInTheDocument();
+    const sectionElem = setup();
+    expect(sectionElem).toBeInTheDocument();
   });
 });

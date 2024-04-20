@@ -17,68 +17,68 @@ describe('Button', () => {
   }
 
   it('버튼이 렌더링 되는지 확인', () => {
-    const button = setup();
-    expect(button).toBeInTheDocument();
+    const buttonElem = setup();
+    expect(buttonElem).toBeInTheDocument();
   });
 
   it('접근 가능한 이름을 가지는지 확인', () => {
-    const button = setup();
-    expect(button).toHaveAccessibleName(buttonText);
+    const buttonElem = setup();
+    expect(buttonElem).toHaveAccessibleName(buttonText);
   });
 
   it('클릭 시 함수가 트리거 되는지 확인', async () => {
     const handleClick = vi.fn();
-    const button = setup({ onClick: handleClick });
-    await userEvent.click(button);
+    const buttonElem = setup({ onClick: handleClick });
+    await userEvent.click(buttonElem);
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   it('버튼이 비활성화되었을 때 data-disabled 속성이 존재하는지 확인', () => {
-    const button = setup({ disabled: true });
-    expect(button).toHaveAttribute('data-disabled');
+    const buttonElem = setup({ disabled: true });
+    expect(buttonElem).toHaveAttribute('data-disabled');
   });
 
   it('버튼이 로딩 상태일때 data-loading 속성이 존재하는지 확인', () => {
-    const button = setup({ loading: true });
-    expect(button).toHaveAttribute('data-loading');
+    const buttonElem = setup({ loading: true });
+    expect(buttonElem).toHaveAttribute('data-loading');
   });
 
   it('버튼이 로딩 상태일때 spinner가 존재하는지 확인', () => {
-    const button = setup({ loading: true });
+    const buttonElem = setup({ loading: true });
     expect(
-      button.querySelector(`.${css.spinner.classNames.base}`),
+      buttonElem.querySelector(`.${css.spinner.classNames.base}`),
     ).toBeInTheDocument();
   });
 
   it('버튼이 로딩 상태일때 loadingText가 렌더링 되는지 확인', () => {
-    const button = setup({ loading: true, loadingText });
-    expect(button).toHaveTextContent(loadingText);
+    const buttonElem = setup({ loading: true, loadingText });
+    expect(buttonElem).toHaveTextContent(loadingText);
   });
 
   it('버튼이 로딩 상태일때 children이 존재하지 않는지 확인', () => {
-    const button = setup({ loading: true });
-    expect(button).not.toHaveTextContent(buttonText);
+    const buttonElem = setup({ loading: true });
+    expect(buttonElem).not.toHaveTextContent(buttonText);
   });
 
   it('버튼이 로딩 상태일 때 비활성화 상태인지 확인', () => {
-    const button = setup({ loading: true });
-    expect(button).toBeDisabled();
-    expect(button).toHaveAttribute('data-disabled');
+    const buttonElem = setup({ loading: true });
+    expect(buttonElem).toBeDisabled();
+    expect(buttonElem).toHaveAttribute('data-disabled');
   });
 
   it('버튼 색상에 따른 data 속성 확인', () => {
-    const button = setup({ color: 'indigo' });
-    expect(button).toHaveAttribute('data-accent-color', 'indigo');
+    const buttonElem = setup({ color: 'indigo' });
+    expect(buttonElem).toHaveAttribute('data-accent-color', 'indigo');
   });
 
   it('커스텀 버튼이 올바르게 렌더링되는지 확인', () => {
-    const button = setup({
+    const buttonElem = setup({
       asChild: true,
       role: 'button',
       children: <span>Custom Button</span>,
     });
-    expect(button).toHaveTextContent('Custom Button');
-    expect(button.tagName.toLowerCase()).toBe('span');
-    expect(button).toHaveAttribute('role', 'button');
+    expect(buttonElem).toHaveTextContent('Custom Button');
+    expect(buttonElem.tagName.toLowerCase()).toBe('span');
+    expect(buttonElem).toHaveAttribute('role', 'button');
   });
 });
