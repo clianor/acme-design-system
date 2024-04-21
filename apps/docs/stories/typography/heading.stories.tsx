@@ -8,6 +8,9 @@ import { fontSizeKeys } from '../utils/constants';
 const meta: Meta<typeof Heading> = {
   title: 'typography/Heading',
   component: Heading,
+  parameters: {
+    componentSubtitle: '헤딩 컴포넌트',
+  },
   argTypes: {
     as: {
       control: { type: 'select' },

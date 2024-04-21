@@ -8,6 +8,14 @@ import { spacingKeys } from '../utils/constants';
 const meta: Meta<typeof Flex> = {
   title: 'layouts/Flex',
   component: Flex,
+  parameters: {
+    componentSubtitle: '플렉스 컴포넌트',
+    docs: {
+      description: {
+        component: '플렉스 레이아웃을 생성하는 컴포넌트.',
+      },
+    },
+  },
   argTypes: {
     display: {
       control: { type: 'select' },

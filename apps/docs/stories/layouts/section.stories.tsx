@@ -6,6 +6,14 @@ import { Section } from '@acme/ui';
 const meta: Meta<typeof Section> = {
   title: 'layouts/Section',
   component: Section,
+  parameters: {
+    componentSubtitle: '섹션 컴포넌트',
+    docs: {
+      description: {
+        component: '페이지 콘텐츠의 섹션을 나타냅니다.',
+      },
+    },
+  },
   argTypes: {
     display: {
       control: { type: 'select' },

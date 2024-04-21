@@ -6,6 +6,14 @@ import { Container } from '@acme/ui';
 const meta: Meta<typeof Container> = {
   title: 'layouts/Container',
   component: Container,
+  parameters: {
+    componentSubtitle: '컨테이너 컴포넌트',
+    docs: {
+      description: {
+        component: '페이지 콘텐츠의 최대 너비를 제한합니다.',
+      },
+    },
+  },
   argTypes: {
     display: {
       control: { type: 'select' },

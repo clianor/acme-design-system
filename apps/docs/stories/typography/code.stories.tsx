@@ -8,6 +8,9 @@ import { fontSizeKeys } from '../utils/constants';
 const meta: Meta<typeof Code> = {
   title: 'typography/Code',
   component: Code,
+  parameters: {
+    componentSubtitle: '코드 블록 컴포넌트',
+  },
   argTypes: {
     size: {
       control: { type: 'select' },

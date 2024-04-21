@@ -8,6 +8,9 @@ import { fontSizeKeys } from '../utils/constants';
 const meta: Meta<typeof Blockquote> = {
   title: 'typography/Blockquote',
   component: Blockquote,
+  parameters: {
+    componentSubtitle: '인용문 컴포넌트',
+  },
   argTypes: {
     size: {
       control: { type: 'select' },

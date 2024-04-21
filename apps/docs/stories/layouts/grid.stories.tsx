@@ -8,6 +8,14 @@ import { spacingKeys } from '../utils/constants';
 const meta: Meta<typeof Grid> = {
   title: 'layouts/Grid',
   component: Grid,
+  parameters: {
+    componentSubtitle: '그리드 컴포넌트',
+    docs: {
+      description: {
+        component: '그리드 레이아웃을 생성하는 컴포넌트.',
+      },
+    },
+  },
   argTypes: {
     display: {
       control: { type: 'select' },

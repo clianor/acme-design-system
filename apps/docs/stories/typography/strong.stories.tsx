@@ -5,6 +5,9 @@ import { Strong, Text } from '@acme/ui';
 const meta: Meta<typeof Strong> = {
   title: 'typography/Strong',
   component: Strong,
+  parameters: {
+    componentSubtitle: '강조된 텍스트 컴포넌트',
+  },
   argTypes: {
     wrap: {
       control: { type: 'select' },

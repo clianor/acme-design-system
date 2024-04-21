@@ -7,6 +7,9 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ['autodocs'],
   title: 'Components/Button',
+  parameters: {
+    componentSubtitle: '버튼 컴포넌트',
+  },
   argTypes: {
     size: {
       control: { type: 'select' },

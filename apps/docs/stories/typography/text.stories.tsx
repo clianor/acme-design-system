@@ -9,7 +9,7 @@ const meta: Meta<typeof Text> = {
   title: 'typography/Text',
   component: Text,
   parameters: {
-    componentSubtitle: '기본 텍스트',
+    componentSubtitle: '텍스트 컴포넌트',
     docs: {
       description: {
         component:

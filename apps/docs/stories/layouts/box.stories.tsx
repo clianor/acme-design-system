@@ -10,6 +10,14 @@ const layoutCategoryTitle = '레이아웃 컴포넌트 공통';
 const meta: Meta<typeof Box> = {
   title: 'layouts/Box',
   component: Box,
+  parameters: {
+    componentSubtitle: '박스 컴포넌트',
+    docs: {
+      description: {
+        component: '기본 레이아웃 구성 컴포넌트.',
+      },
+    },
+  },
   argTypes: {
     display: {
       control: { type: 'select' },
