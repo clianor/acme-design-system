@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { createSprinkles } from '@vanilla-extract/sprinkles';
 
+import { layoutLayer } from '../../shared/styles/layer.css';
 import {
   BoxProperties,
   FlexAndGridProperties,
@@ -12,7 +13,11 @@ import {
 } from '../../shared/styles/properties.css';
 
 export const box = style({
-  boxSizing: 'border-box',
+  '@layer': {
+    [layoutLayer]: {
+      boxSizing: 'border-box',
+    },
+  },
 });
 
 export const boxSprinkles = createSprinkles(

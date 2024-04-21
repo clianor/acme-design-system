@@ -6,25 +6,31 @@ import { recipe } from '@vanilla-extract/recipes';
 import type { AccentColor } from '@acme/themes';
 import { accentColors, vars } from '@acme/themes';
 
+import { componentLayer } from '../../shared/styles/layer.css';
+
 export const button = recipe({
   base: {
-    outline: 'none',
-    boxSizing: 'border-box',
-    border: 'none',
-    cursor: 'pointer',
+    '@layer': {
+      [componentLayer]: {
+        outline: 'none',
+        boxSizing: 'border-box',
+        border: 'none',
+        cursor: 'pointer',
 
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: '0',
-    userSelect: 'none',
-    verticalAlign: 'top',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexShrink: '0',
+        userSelect: 'none',
+        verticalAlign: 'top',
 
-    selectors: {
-      '&[data-disabled]': {
-        cursor: 'not-allowed',
-        color: vars.colors.scale.grayAlpha[8],
-        backgroundColor: vars.colors.scale.grayAlpha[3],
+        selectors: {
+          '&[data-disabled]': {
+            cursor: 'not-allowed',
+            color: vars.colors.scale.grayAlpha[8],
+            backgroundColor: vars.colors.scale.grayAlpha[3],
+          },
+        },
       },
     },
   },
@@ -108,13 +114,17 @@ const spinKeyframes = keyframes({
 
 export const spinner = recipe({
   base: {
-    animation: `${spinKeyframes} 0.45s linear infinite`,
-    display: 'inline-block',
-    borderTop: '2px solid currentcolor',
-    borderRight: '2px solid currentcolor',
-    borderBottom: '2px solid transparent',
-    borderLeft: '2px solid transparent',
-    borderRadius: '50%',
+    '@layer': {
+      [componentLayer]: {
+        animation: `${spinKeyframes} 0.45s linear infinite`,
+        display: 'inline-block',
+        borderTop: '2px solid currentcolor',
+        borderRight: '2px solid currentcolor',
+        borderBottom: '2px solid transparent',
+        borderLeft: '2px solid transparent',
+        borderRadius: '50%',
+      },
+    },
   },
   variants: {
     size: {

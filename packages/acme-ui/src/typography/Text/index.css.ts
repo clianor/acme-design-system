@@ -6,7 +6,11 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import type { AccentColor } from '@acme/themes';
 import { accentColors, vars } from '@acme/themes';
 
-import { conditions } from '../../shared/styles/properties.css';
+import { typographyLayer } from '../../shared/styles/layer.css';
+import {
+  MarginProperties,
+  conditions,
+} from '../../shared/styles/properties.css';
 
 type FontSizeKey = keyof typeof vars.typography.fontSize;
 type FontWeightKey = keyof typeof vars.typography.fontWeight;
@@ -20,10 +24,14 @@ const fontWeightKeys = Object.keys(
 
 export const text = recipe({
   base: {
-    display: 'block',
-    selectors: {
-      '&:where(&)': {
-        margin: 0,
+    '@layer': {
+      [typographyLayer]: {
+        display: 'block',
+        selectors: {
+          '&:where(&)': {
+            margin: 0,
+          },
+        },
       },
     },
   },
@@ -96,7 +104,7 @@ export const TextProperties = defineProperties({
   },
 });
 
-export const textSprinkles = createSprinkles(TextProperties);
+export const textSprinkles = createSprinkles(TextProperties, MarginProperties);
 
 export type TextVariants = RecipeVariants<typeof text>;
 export type TextSprinkles = Parameters<typeof textSprinkles>[0];

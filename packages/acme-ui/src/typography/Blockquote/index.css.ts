@@ -6,6 +6,7 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import type { AccentColor } from '@acme/themes';
 import { accentColors, vars } from '@acme/themes';
 
+import { typographyLayer } from '../../shared/styles/layer.css';
 import { conditions } from '../../shared/styles/properties.css';
 
 type FontSizeKey = keyof typeof vars.typography.fontSize;
@@ -20,14 +21,18 @@ const fontWeightKeys = Object.keys(
 
 export const Blockquote = recipe({
   base: {
-    boxSizing: 'border-box',
-    borderLeft: `max(${vars.box.spacing[1]}, 0.25em)`,
-    borderLeftStyle: 'solid',
-    borderLeftColor: vars.colors.scale.indigoAlpha[6],
-    paddingLeft: `min(${vars.box.spacing[5]}, max(${vars.box.spacing[3]}, 0.5em))`,
-    selectors: {
-      '&:where(&)': {
-        margin: 0,
+    '@layer': {
+      [typographyLayer]: {
+        boxSizing: 'border-box',
+        borderLeft: `max(${vars.box.spacing[1]}, 0.25em)`,
+        borderLeftStyle: 'solid',
+        borderLeftColor: vars.colors.scale.indigoAlpha[6],
+        paddingLeft: `min(${vars.box.spacing[5]}, max(${vars.box.spacing[3]}, 0.5em))`,
+        selectors: {
+          '&:where(&)': {
+            margin: 0,
+          },
+        },
       },
     },
   },

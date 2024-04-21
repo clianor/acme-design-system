@@ -10,6 +10,7 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import type { AccentColor } from '@acme/themes';
 import { accentColors, vars } from '@acme/themes';
 
+import { typographyLayer } from '../../shared/styles/layer.css';
 import { conditions } from '../../shared/styles/properties.css';
 
 type FontSizeKey = keyof typeof vars.typography.fontSize;
@@ -39,19 +40,23 @@ export const colorVars = createThemeContract({
 
 export const Code = recipe({
   base: {
-    lineHeight: 1.25,
-    borderRadius: `calc(${vars.box.radius[1]} + 0.2em)`,
+    '@layer': {
+      [typographyLayer]: {
+        lineHeight: 1.25,
+        borderRadius: `calc(${vars.box.radius[1]} + 0.2em)`,
 
-    boxSizing: 'border-box',
-    paddingTop: '0.1em',
-    paddingBottom: '0.1em',
-    paddingLeft: '0.25em',
-    paddingRight: '0.25em',
-    height: 'fit-content',
+        boxSizing: 'border-box',
+        paddingTop: '0.1em',
+        paddingBottom: '0.1em',
+        paddingLeft: '0.25em',
+        paddingRight: '0.25em',
+        height: 'fit-content',
 
-    selectors: {
-      '&:where(&)': {
-        fontSize: 'inherit',
+        selectors: {
+          '&:where(&)': {
+            fontSize: 'inherit',
+          },
+        },
       },
     },
   },

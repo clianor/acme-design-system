@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { createSprinkles } from '@vanilla-extract/sprinkles';
 
+import { layoutLayer } from '../../shared/styles/layer.css';
 import {
   FlexAndGridProperties,
   FlexProperties,
@@ -12,7 +13,11 @@ import {
 } from '../../shared/styles/properties.css';
 
 export const flex = style({
-  justifyContent: 'flex-start',
+  '@layer': {
+    [layoutLayer]: {
+      justifyContent: 'flex-start',
+    },
+  },
 });
 
 export const flexSprinkles = createSprinkles(

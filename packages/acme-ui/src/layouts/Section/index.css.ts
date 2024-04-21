@@ -3,6 +3,7 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 
 import { vars } from '@acme/themes';
 
+import { layoutLayer } from '../../shared/styles/layer.css';
 import {
   FlexAndGridProperties,
   LayoutProperties,
@@ -46,10 +47,14 @@ export const SectionProperties = defineProperties({
 });
 
 export const section = style({
-  boxSizing: 'border-box',
-  flexShrink: 0,
-  paddingTop: sizeVar,
-  paddingBottom: sizeVar,
+  '@layer': {
+    [layoutLayer]: {
+      boxSizing: 'border-box',
+      flexShrink: 0,
+      paddingTop: sizeVar,
+      paddingBottom: sizeVar,
+    },
+  },
 });
 
 export const sectionSprinkles = createSprinkles(

@@ -4,14 +4,19 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 
 import { vars } from '@acme/themes';
 
+import { typographyLayer } from '../../shared/styles/layer.css';
 import { conditions } from '../../shared/styles/properties.css';
 
 export const strong = recipe({
   base: {
-    fontWeight: vars.typography.fontWeight.bold,
-    selectors: {
-      '&:where(&)': {
-        fontSize: 'inherit',
+    '@layer': {
+      [typographyLayer]: {
+        fontWeight: vars.typography.fontWeight.bold,
+        selectors: {
+          '&:where(&)': {
+            fontSize: 'inherit',
+          },
+        },
       },
     },
   },

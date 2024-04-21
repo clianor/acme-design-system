@@ -1,6 +1,7 @@
 import { createVar, style } from '@vanilla-extract/css';
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 
+import { layoutLayer } from '../../shared/styles/layer.css';
 import {
   FlexAndGridProperties,
   LayoutProperties,
@@ -55,16 +56,24 @@ export const ContainerProperties = defineProperties({
 });
 
 export const container = style({
-  display: 'flex',
-  boxSizing: 'border-box',
-  flexDirection: 'column',
-  flexShrink: 0,
-  flexGrow: 1,
+  '@layer': {
+    [layoutLayer]: {
+      display: 'flex',
+      boxSizing: 'border-box',
+      flexDirection: 'column',
+      flexShrink: 0,
+      flexGrow: 1,
+    },
+  },
 });
 
 export const innerContainer = style({
-  width: '100%',
-  maxWidth: sizeVar,
+  '@layer': {
+    [layoutLayer]: {
+      width: '100%',
+      maxWidth: sizeVar,
+    },
+  },
 });
 
 export const containerSprinkles = createSprinkles(

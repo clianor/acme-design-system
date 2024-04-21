@@ -6,6 +6,7 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import type { AccentColor } from '@acme/themes';
 import { accentColors, vars } from '@acme/themes';
 
+import { typographyLayer } from '../../shared/styles/layer.css';
 import { conditions } from '../../shared/styles/properties.css';
 
 type FontSizeKey = keyof typeof vars.typography.fontSize;
@@ -20,10 +21,14 @@ const fontWeightKeys = Object.keys(
 
 export const heading = recipe({
   base: {
-    display: 'block',
-    selectors: {
-      '&:where(&)': {
-        margin: 0,
+    '@layer': {
+      [typographyLayer]: {
+        display: 'block',
+        selectors: {
+          '&:where(&)': {
+            margin: 0,
+          },
+        },
       },
     },
   },
