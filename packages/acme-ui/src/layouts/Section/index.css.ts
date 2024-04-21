@@ -6,8 +6,9 @@ import { vars } from '@acme/themes';
 import {
   FlexAndGridProperties,
   LayoutProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
   OverflowProperties,
+  PaddingProperties,
   SizeProperties,
   conditions,
 } from '../../shared/styles/properties.css';
@@ -53,7 +54,8 @@ export const section = style({
 
 export const sectionSprinkles = createSprinkles(
   SectionProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
+  PaddingProperties,
   LayoutProperties,
   OverflowProperties,
   FlexAndGridProperties,

@@ -122,7 +122,7 @@ export const GridProperties = defineProperties({
   },
 });
 
-export const MarginAndPaddingProperties = defineProperties({
+export const MarginProperties = defineProperties({
   conditions,
   defaultCondition: 'initial',
   properties: {
@@ -130,15 +130,24 @@ export const MarginAndPaddingProperties = defineProperties({
     marginRight: vars.box.spacing,
     marginBottom: vars.box.spacing,
     marginLeft: vars.box.spacing,
+  },
+  shorthands: {
+    margin: ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'],
+    marginX: ['marginLeft', 'marginRight'],
+    marginY: ['marginTop', 'marginBottom'],
+  },
+});
+
+export const PaddingProperties = defineProperties({
+  conditions,
+  defaultCondition: 'initial',
+  properties: {
     paddingTop: vars.box.spacing,
     paddingRight: vars.box.spacing,
     paddingBottom: vars.box.spacing,
     paddingLeft: vars.box.spacing,
   },
   shorthands: {
-    margin: ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'],
-    marginX: ['marginLeft', 'marginRight'],
-    marginY: ['marginTop', 'marginBottom'],
     padding: ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'],
     paddingX: ['paddingLeft', 'paddingRight'],
     paddingY: ['paddingTop', 'paddingBottom'],

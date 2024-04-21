@@ -5,8 +5,9 @@ import {
   BoxProperties,
   FlexAndGridProperties,
   LayoutProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
   OverflowProperties,
+  PaddingProperties,
   SizeProperties,
 } from '../../shared/styles/properties.css';
 
@@ -16,7 +17,8 @@ export const box = style({
 
 export const boxSprinkles = createSprinkles(
   BoxProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
+  PaddingProperties,
   LayoutProperties,
   OverflowProperties,
   FlexAndGridProperties,

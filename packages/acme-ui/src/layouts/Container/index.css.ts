@@ -4,8 +4,9 @@ import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 import {
   FlexAndGridProperties,
   LayoutProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
   OverflowProperties,
+  PaddingProperties,
   SizeProperties,
   conditions,
 } from '../../shared/styles/properties.css';
@@ -68,7 +69,8 @@ export const innerContainer = style({
 
 export const containerSprinkles = createSprinkles(
   ContainerProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
+  PaddingProperties,
   LayoutProperties,
   OverflowProperties,
   FlexAndGridProperties,

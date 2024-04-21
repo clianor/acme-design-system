@@ -4,14 +4,16 @@ import {
   FlexAndGridProperties,
   GridProperties,
   LayoutProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
   OverflowProperties,
+  PaddingProperties,
   SizeProperties,
 } from '../../shared/styles/properties.css';
 
 export const gridSprinkles = createSprinkles(
   GridProperties,
-  MarginAndPaddingProperties,
+  MarginProperties,
+  PaddingProperties,
   LayoutProperties,
   OverflowProperties,
   FlexAndGridProperties,
