@@ -23,4 +23,5 @@ export const NODES = [
   'blockquote',
   'code',
   'em',
+  'kbd',
 ] as const;
