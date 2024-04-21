@@ -24,4 +24,5 @@ export const NODES = [
   'code',
   'em',
   'kbd',
+  'q',
 ] as const;
