@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Strong, Text } from '@acme/ui';
+import { Box, Flex, Strong, Text } from '@acme/ui';
 
 const meta: Meta<typeof Strong> = {
   title: 'typography/Strong',
@@ -38,6 +38,38 @@ export const Default: Story = {
       <Text>
         The most important thing to remember is, <Strong>stay positive</Strong>.
       </Text>
+    );
+  },
+};
+
+export const Wrap: Story = {
+  render: (props) => {
+    return (
+      <Flex flexDirection="column" rowGap={3}>
+        {(['nowrap', 'balance', 'pretty'] as const).map((wrap) => {
+          return (
+            <Box key={wrap} maxWidth={50}>
+              <Strong {...props} truncate wrap={wrap}>
+                The quick brown fox jumps over the lazy dog
+              </Strong>
+            </Box>
+          );
+        })}
+      </Flex>
+    );
+  },
+};
+
+export const Truncate: Story = {
+  render: (props) => {
+    return (
+      <Flex maxWidth={50}>
+        <Strong {...props} truncate>
+          The goal of typography is to relate font size, line height, and line
+          width in a proportional way that maximizes beauty and makes reading
+          easier and more pleasant.
+        </Strong>
+      </Flex>
     );
   },
 };
