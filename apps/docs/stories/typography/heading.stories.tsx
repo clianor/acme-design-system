@@ -193,3 +193,15 @@ export const Color: Story = {
     );
   },
 };
+
+export const Truncate: Story = {
+  render: (props) => {
+    return (
+      <Flex maxWidth={50}>
+        <Heading {...props} truncate>
+          The quick brown fox jumps over the lazy dog
+        </Heading>
+      </Flex>
+    );
+  },
+};
